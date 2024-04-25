@@ -1,6 +1,6 @@
 REQUISITOS
-[ ] - Implementação de CRUD
-[ ] - Implementar diferentes algoritmos de ordenação
+[X] - Implementação de CRUD
+[X] - Implementar diferentes algoritmos de ordenação
 [ ] - Mostrar quantos passos cada algoritmo consegue organizar a lista
 [ ] - Interface gráfica
 
@@ -11,7 +11,7 @@ CRUD
 [X] - Excluir todas as pessoas cadastradas
 
 ALGORITMOS DE ORDENAÇÃO
-[ ] - Ordenação por seleção
-[ ] - Ordenação por inserção
-[ ] - Quicksort
+[X] - Ordenação por seleção
+[X] - Ordenação por inserção
+[X] - Quicksort
 // talvez adicionar os outros
