@@ -2,12 +2,13 @@ REQUISITOS
 [ ] - Implementação de CRUD
 [ ] - Implementar diferentes algoritmos de ordenação
 [ ] - Mostrar quantos passos cada algoritmo consegue organizar a lista
+[ ] - Interface gráfica
 
 CRUD
-[ ] - Inserir o nome de uma pessoa
-[ ] - Visulizar as pessoas cadastradas
-[ ] - Excluir um nome específico
-[ ] - Excluir todas as pessoas cadastradas
+[X] - Inserir o nome de uma pessoa
+[X] - Visulizar as pessoas cadastradas
+[X] - Excluir um nome específico
+[X] - Excluir todas as pessoas cadastradas
 
 ALGORITMOS DE ORDENAÇÃO
 [ ] - Ordenação por seleção
