@@ -1,5 +1,5 @@
-from Arquivo import Arquivo
-from Ordenacao import Ordenacao
+from models.Arquivo import Arquivo
+from models.Ordenacao import Ordenacao
 
 arquivo = Arquivo('dados.txt')
 arquivo.inicializarBaseDeDados()
