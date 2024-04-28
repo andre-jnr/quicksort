@@ -1,7 +1,7 @@
 REQUISITOS
 [X] - Implementação de CRUD
 [X] - Implementar diferentes algoritmos de ordenação
-[ ] - Mostrar quantos passos cada algoritmo consegue organizar a lista
+[X] - Mostrar quantos passos cada algoritmo consegue organizar a lista
 [ ] - Interface gráfica
 
 CRUD
