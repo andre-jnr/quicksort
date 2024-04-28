@@ -4,15 +4,15 @@ class Arquivo:
 
     def inicializarBaseDeDados(self):
         try:
-            with open(self.nome_arquivo, 'r') as file:
+            with open(f"databases/{self.nome_arquivo}", 'r') as file:
                 file.read()
         except FileNotFoundError:
-            with open(self.nome_arquivo, 'w') as file:
+            with open(f"databases/{self.nome_arquivo}", 'w') as file:
                 file.write('')
 
     def adicionarNome(self, nome):
         try:
-            with open(self.nome_arquivo, 'a') as file:
+            with open(f"databases/{self.nome_arquivo}", 'a') as file:
                 file.write(nome + '\n')
         except:
             print('Não foi possível adicionar o nome.')
@@ -21,7 +21,7 @@ class Arquivo:
 
     def exibirNome(self):
         try:
-            arquivo = open(self.nome_arquivo, 'r')
+            arquivo = open(f"databases/{self.nome_arquivo}", 'r')
         except:
             print('Não foi possível exibir o nome.')
         else:
@@ -31,14 +31,14 @@ class Arquivo:
 
     def listarNomes(self):
         nomes = []
-        with open(self.nome_arquivo, 'r') as file:
+        with open(f"databases/{self.nome_arquivo}", 'r') as file:
             for linha in file:
                 nomes.append(str(linha[:-1]))
 
         return nomes
 
     def salvarLista(self, lista):
-        with open(self.nome_arquivo, 'w') as file:
+        with open(f"databases/{self.nome_arquivo}", 'w') as file:
             for nome in lista:
                 file.write(str(nome))
 
@@ -59,7 +59,7 @@ class Arquivo:
         return False
 
     def excluirTodos(self):
-        with open(self.nome_arquivo, 'w') as file:
+        with open(f"databases/{self.nome_arquivo}", 'w') as file:
             file.write('')
             print('Toda a base de dados foi deletada')
             return True
