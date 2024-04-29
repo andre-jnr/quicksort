@@ -1,4 +1,5 @@
 import customtkinter as ctk
+from AnalisarAlgoritmos import AnalisarAlgoritmos
 
 
 class Menu:
@@ -12,7 +13,7 @@ class Menu:
     def criar_componenetes(self):
         self.titulo = ctk.CTkLabel(
             self.janela,
-            text="Quicksort",
+            text="Quicksort"
         )
 
         titulo_janela = ctk.CTkLabel(
@@ -27,7 +28,7 @@ class Menu:
         btn_consultar_dados = ctk.CTkButton(
             self.frame_botoes,
             text="CONSULTAR DADOS",
-            command=self.teste,
+            command=self.analisar_algoritmos,
             font=('arial', 20)
         )
 
@@ -36,13 +37,13 @@ class Menu:
         btn_analisar_algoritmos = ctk.CTkButton(
             self.frame_botoes,
             text="ANALISAR ALGORITMOS",
-            command=self.teste,
+            command=self.analisar_algoritmos,
             font=('arial', 20)
         )
         btn_analisar_algoritmos.pack(pady=0, padx=0)
 
-    def teste(self):
-        print('apenas um teste')
+    def analisar_algoritmos(self):
+        tela_analise = AnalisarAlgoritmos()
 
 
 if __name__ == "__main__":
