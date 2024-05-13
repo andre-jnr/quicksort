@@ -6,7 +6,7 @@ class Menu:
     def __init__(self):
         self.janela = ctk.CTk()
         self.janela.title("Menu")
-        self.janela.geometry("500x348")
+        self.janela.geometry("765x348")
 
         self.criar_componenetes()
 
@@ -43,6 +43,7 @@ class Menu:
         btn_analisar_algoritmos.pack(pady=0, padx=0)
 
     def analisar_algoritmos(self):
+        self.janela.destroy()
         tela_analise = AnalisarAlgoritmos()
 
 
