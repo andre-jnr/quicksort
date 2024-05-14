@@ -1,5 +1,6 @@
 import customtkinter as ctk
 from AnalisarAlgoritmos import AnalisarAlgoritmos
+from ConsultarDados import ConsultarDados
 
 
 class Menu:
@@ -28,7 +29,7 @@ class Menu:
         btn_consultar_dados = ctk.CTkButton(
             self.frame_botoes,
             text="CONSULTAR DADOS",
-            command=self.analisar_algoritmos,
+            command=self.consultar_dados,
             font=('arial', 20)
         )
 
@@ -45,6 +46,10 @@ class Menu:
     def analisar_algoritmos(self):
         self.janela.destroy()
         tela_analise = AnalisarAlgoritmos()
+
+    def consultar_dados(self):
+        self.janela.destroy()
+        tela_consulta = ConsultarDados()
 
 
 if __name__ == "__main__":
