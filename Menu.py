@@ -1,6 +1,6 @@
 import customtkinter as ctk
-from AnalisarAlgoritmos import AnalisarAlgoritmos
-from ConsultarDados import ConsultarDados
+from screens.AnalisarAlgoritmos import AnalisarAlgoritmos
+from screens.ConsultarDados import ConsultarDados
 
 
 class Menu:

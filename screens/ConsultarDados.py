@@ -15,7 +15,7 @@ class ConsultarDados:
 
     def criar_componenetes(self):
         self.arquivo.inicializarBaseDeDados()
-        lista = self.arquivo.listarNomes()
+        self.lista = self.arquivo.listarNomes()
 
         self.titulo = ctk.CTkLabel(
             self.janela,
@@ -36,7 +36,7 @@ class ConsultarDados:
             self.janela,
             text="Visualizar nomes",
             font=('arial', 30),
-            command='adicionar função aqui'
+            command=self.visualizar_nomes
         )
         btn_visualizar_nomes.grid(row=2, column=0, pady=7.5, padx=0)
 
@@ -56,7 +56,6 @@ class ConsultarDados:
         )
         btn_deletar_todos_nomes.grid(row=4, column=0, pady=7.5, padx=0)
 
-
     def visualizar_nomes(self):
         self.janela.destroy()
-        
+        tela = ConsultarDados()
