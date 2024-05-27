@@ -38,17 +38,17 @@ class AnalisarAlgoritmos:
 
         self.btn_ordenar_lista = ctk.CTkButton(
             self.janela,
-            text='VOLTAR',
-            command=lambda: self.voltar()
-        )
-        self.btn_ordenar_lista.grid(row=2, column=0, pady=10)
-
-        self.btn_ordenar_lista = ctk.CTkButton(
-            self.janela,
             text='Ordenar lista',
             command=lambda: self.mostrarResultado(lista)
         )
-        self.btn_ordenar_lista.grid(row=3, column=0)
+        self.btn_ordenar_lista.grid(row=2, column=0)
+
+        self.btn_voltar = ctk.CTkButton(
+            self.janela,
+            text='VOLTAR',
+            command=lambda: self.voltar()
+        )
+        self.btn_voltar.grid(row=3, column=0, pady=10)
 
         # Criando layout de Quicksort
         self.label_lista_ordenada = ctk.CTkLabel(
@@ -144,6 +144,7 @@ class AnalisarAlgoritmos:
         self.pior_caso_por_insercao.grid(row=8, column=2, pady=0, padx=0)
 
     def mostrarResultado(self, lst):
+        self.btn_voltar.grid(row=9, column=1, pady=10)
         # Mostrando resultado do algoritmo quicksort
         json = sort.quicksort(lst)
         lista_ordenada = json['lista_ordenada']
