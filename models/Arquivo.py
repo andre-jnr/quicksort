@@ -19,15 +19,14 @@ class Arquivo:
         else:
             print('Nome adicionado com sucesso.')
 
-    def exibirNome(self):
+    def exibirNomes(self):
         try:
             arquivo = open(f"databases/{self.nome_arquivo}", 'r')
+            self.nomes = self.listarNomes()
         except:
             print('Não foi possível exibir o nome.')
         else:
-            print("----Nomes registrados----")
-            for nome in arquivo:
-                print(nome, end='')
+            return "\n".join(self.nomes)
 
     def listarNomes(self):
         nomes = []

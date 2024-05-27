@@ -1,5 +1,6 @@
 import customtkinter as ctk
 from models.Arquivo import Arquivo
+from screens.VisualizarNomes import VisualizarNome
 
 
 class ConsultarDados:
@@ -58,4 +59,4 @@ class ConsultarDados:
 
     def visualizar_nomes(self):
         self.janela.destroy()
-        tela = ConsultarDados()
+        tela = VisualizarNome()
