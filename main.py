@@ -1,28 +1,38 @@
 from models.Arquivo import Arquivo
-from models.Ordenacao import Ordenacao
+from models.Ordenacao import Ordenacao as sort
 
-arquivo = Arquivo('dados200.txt')
-arquivo.inicializarBaseDeDados()
+# arquivo = Arquivo('dados200.txt')
+# arquivo.inicializarBaseDeDados()
 
-lista_original = arquivo.listarNomes()
+# lista_original = arquivo.listarNomes()
 # print(lista_original)
 
-lista_quicksort = Ordenacao.quicksort(lista_original)
-lista_por_selecao = Ordenacao.porSelecao(lista_original)
-lista_por_insercao = Ordenacao.porInsercao(lista_original)
+class Menu:
+    def opcoes(self):
+        print('MENU PRINCIPAL')
+        print('Escolha um número para continuar...')
+        print('[1] - Consultar dados')
+        print('[2] - Analisar algoritmo')
+        print('[Qualquer tecla] - Sair')
+        escolha = str(input('-> '))
 
-print(f'Tamanho da lista: {len(lista_original)}')
-print(f'Operações quicksort: {lista_quicksort['operacoes']}')
-bigO = Ordenacao.calcularBigO(len(lista_original), algoritmo='quicksort')
-print(f'BigO quicksort: {bigO}')
-print('')
+        match escolha:
+            case '1':
+                escolha = self.consultarDados()
+            case '2':
+                pass
+            case _:
+                return
 
-print(f'Operações de ordenação por seleção: {lista_por_selecao['operacoes']}')
-bigO = Ordenacao.calcularBigO(len(lista_original), algoritmo='por_selecao')
-print(f'BigO por seleção: {bigO}')
-print('')
+    def consultarDados():
+        print('[1] - Adicionar nome')
+        print('[2] - Visualizar nomes')
+        print('[3] - Deletar nome')
+        print('[4] - Deletar todos os nomes')
+        print('[5] - Voltar para o menu principal')
+        escolha = str(input('-> '))
 
-print(f'Operações de ordenação por inserção: {
-      lista_por_insercao['operacoes']}')
-bigO = Ordenacao.calcularBigO(len(lista_original), algoritmo='por_insercao')
-print(f'BigO por inserção: {bigO}')
+        if escolha in ['1', '2', '3', '4', '5']:
+            return escolha
+        
+        print('Digite uma escolha válida!')

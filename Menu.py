@@ -7,7 +7,7 @@ class Menu:
     def __init__(self):
         self.janela = ctk.CTk()
         self.janela.title("Menu")
-        self.janela.geometry("785x348")
+        self.janela.geometry("785x402")
 
         self.criar_componenetes()
 

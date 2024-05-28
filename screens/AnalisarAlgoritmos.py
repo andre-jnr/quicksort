@@ -7,7 +7,7 @@ class AnalisarAlgoritmos:
     def __init__(self):
         self.janela = ctk.CTk()
         self.janela.title("Analisar Algoritmos")
-        self.janela.geometry("785x348")
+        self.janela.geometry("785x402")
         self.arquivo = Arquivo('dados200.txt')
         self.janela.grid_columnconfigure(0, weight=1)
 

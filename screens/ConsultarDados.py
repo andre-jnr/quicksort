@@ -7,7 +7,7 @@ class ConsultarDados:
     def __init__(self):
         self.janela = ctk.CTk()
         self.janela.title("Consultar Dados")
-        self.janela.geometry("785x348")
+        self.janela.geometry("785x402")
         self.arquivo = Arquivo('dados200.txt')
         self.janela.grid_columnconfigure(0, weight=1)
 
@@ -27,7 +27,7 @@ class ConsultarDados:
 
         btn_adicionar_nome = ctk.CTkButton(
             self.janela,
-            text="Adicionar nome",
+          text="Adicionar nome",
             font=('arial', 30),
             command='adicionar função aqui'
         )
@@ -41,22 +41,36 @@ class ConsultarDados:
         )
         btn_visualizar_nomes.grid(row=2, column=0, pady=7.5, padx=0)
 
-        btn_deletar_nome = ctk.CTkButton(
+        btn_excluir_nome = ctk.CTkButton(
             self.janela,
-            text="Deletar nome",
+            text="Excluir nome",
             font=('arial', 30),
             command='adicionar função aqui'
         )
-        btn_deletar_nome.grid(row=3, column=0, pady=7.5, padx=0)
+        btn_excluir_nome.grid(row=3, column=0, pady=7.5, padx=0)
 
-        btn_deletar_todos_nomes = ctk.CTkButton(
+        btn_excluir_todos_nomes = ctk.CTkButton(
             self.janela,
-            text="Deletar todos os nomes",
+            text="Excluir todos os nomes",
             font=('arial', 30),
             command="Adiconar função aqui"
         )
-        btn_deletar_todos_nomes.grid(row=4, column=0, pady=7.5, padx=0)
+        btn_excluir_todos_nomes.grid(row=4, column=0, pady=7.5, padx=0)
+
+        btn_voltar = ctk.CTkButton(
+            self.janela,
+          text="Voltar",
+            font=('arial', 30),
+            command=self.voltar
+        )
+        btn_voltar.grid(row=5, column=0, pady=7.5, padx=0)  
 
     def visualizar_nomes(self):
         self.janela.destroy()
         tela = VisualizarNome()
+
+    def voltar(self):
+        from Menu import Menu
+        self.janela.destroy()
+        menu = Menu()
+        menu.janela.mainloop()
